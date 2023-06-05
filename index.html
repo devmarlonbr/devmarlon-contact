@@ -27,78 +27,531 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
+    <link rel="stylesheet" href="https://use.typekit.net/txb1arq.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevMarlon - do Design ao Código</title>
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>DevMarlon - design e desenvolvimento de interfaces</title>
+
+    <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body>
-    <div class="px-4 w-full h-screen flex justify-center items-center">
-      <main class="flex flex-col items-center">
-        <a href="index.html">
-          <img
-            src="./assets/logo-devmarlon.svg"
-            alt="Logo da Marca - Devmarlon"
-          />
-        </a>
-        <h1
-          class="text-center mt-12 text-white font-normal text-3xl md:text-5xl font-archivo"
-        >
-          Eai! <strong class="font-bold">Vamos trabalhar juntos?</strong>
-        </h1>
-        <p
-          class="max-w-[785px] text-center text-sm md:text-lg mt-4 text-white text-opacity-60"
-        >
-          Meu nome é Marlon Lencina, Trabalho como Especialista em
-          Desenvolvimento de Interfaces WEB & MOBILE, além de atuar como
-          <strong class="font-semibold"
-            >Designer UI/UX & Desenvolvedor Front-end</strong
-          >
-        </p>
-        <div
-          class="bg-[#101012] px-8 py-6 flex flex-col items-center rounded-lg mt-12 max-w-[448px]"
-        >
-          <p class="text-center text-white text-sm md:text-lg text-opacity-40">
-            Selecione o melhor meio que preferir para solicitar um
-            <b>orçamento sem compromisso</b> para seu projeto:
-          </p>
-          <div class="flex flex-col gap-[16px] w-full">
-            <a
-              class="px-6 py-4 bg-[#199B65] rounded-lg w-full flex justify-between items-center text-white font-bold mt-6 hover:bg-black hover:text-white transition-all group"
-              href="https://api.whatsapp.com/send/?phone=5551980392037&text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento!"
-            >
-              Enviar Mensagem
+    <div class="bg-[url('../assets/gradient-bg.png')] bg-cover bg-no-repeat">
+      <header
+        id="header"
+        class="w-full fixed z-50 transition-all"
+      >
+        <div class="md:h-auto w-full flex flex-col md:flex-row container-1216 px-5 gap-12 py-4 relative">
+          <div class="w-full md:w-auto flex justify-between items-center">
+            <a class="w-[180px]" href="index.html">
               <img
-                class="group-hover:fill-violet"
-                src="./assets/whatsapp-icon.svg"
-                alt=""
-                srcset=""
+                src="./assets/logo-devmarlon.svg"
+                alt="Logomarca do estúdio"
+                class="w-full"
               />
             </a>
+            <button id="button-navbar" class="h-full md:hidden text-body16 text-white font-light">
+              menu.
+            </button>
+          </div>
+          <div id="navbar" class="hidden w-full md:flex md:flex-row flex-col items-center justify-between gap-8 transition-all">
+            <ul class="flex flex-col md:flex-row items-center gap-4 h-full">
+              <li class="">
+                <a class="h-full text-white text-caption16 font-normal hover:bg-pink hover:text-black transition-all" href="#"
+                  >Quem somos</a
+                >
+              </li>
+              <li class="">
+                <a class="h-full text-white text-caption16 font-normal hover:bg-pink hover:text-black transition-all" href="#"
+                  >Projetos</a
+                >
+              </li>
+              <li class="">
+                <a class="h-full text-white text-caption16 font-normal hover:bg-pink hover:text-black transition-all" href="#"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <div class="max-w-[382px] w-full flex flex-col md:flex-row items-center gap-8">
+              <div class="hover:opacity-70 transition-all">
+                <a target="_blank" href="https://www.instagram.com/devmarlon.work/"
+                  ><img src="./assets/instagram-icon.svg" alt="" srcset=""
+                /></a>
+              </div>
+              <div
+                class="hover:opacity-70 transition-all md:max-w-[310px] w-full flex text-black rounded-xl bg-white"
+              >
+                <a
+                  class="flex gap-1 w-full items-center justify-center py-3 text-button18 font-bold"
+                  href="orcamento.html"
+                >
+                  Quero um orçamento
+                  <img src="./assets/arrow-right.svg" alt="" srcset="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main
+        class="h-screen w-full container-1216 px-5 flex flex-col justify-center items-center"
+      >
+        <div class="hover:opacity-80 hover:translate-x-2 transition-all flex items-center gap-4">
+          <img src="./assets/arrow-right-circle.svg" />
+          <h4 class="text-head24 font-normal text-gray">
+            do <b class="font-semibold text-white">Design</b> ao
+            <b class="font-semibold text-white">Código</b>
+          </h4>
+        </div>
+        <h1 class="w-full mt-5 text-gray text-center text-head32 md:text-head64 leading-tight">
+          Desenvolvendo sua <br />
+          <b class="font-bold text-white">presença digital</b>
+        </h1>
+        <p class="max-w-[720px] text-center text-body16 md:text-body18 mt-6">
+          Oferecemos uma solução completa para sua marca ou empresa. Chega
+          perder tempo procurando profissionais. sites e aplicativos sem
+          complicação. Tudo em um lugar só ❤
+        </p>
+        <div class="max-w-[592px] w-full flex flex-col md:flex-row mt-16 gap-8">
+          <div
+            class="hover:translate-x-1 hover:opacity-70 transition-all w-full flex text-white rounded-xl bg-gradient-to-br from-purple to-violet"
+          >
             <a
-              class="px-6 py-4 bg-[#ED2D78] rounded-lg w-full flex justify-between items-center text-white font-bold hover:bg-black hover:text-white transition-all group"
-              href="https://www.instagram.com/devmarlon.work/"
+              class="h-full w-full flex justify-center items-center gap-2 font-bold text-button18  py-4"
+              href="orcamento.html"
             >
-              Instagram
-              <img
-                class="group-hover:fill-violet"
-                src="./assets/instagram-icon.svg"
-                alt=""
-                srcset=""
-              />
+              Vamos trabalhar juntos
+              <img src="./assets/arrow-right-bottom.svg" alt="" srcset="" />
+            </a>
+          </div>
+          <div class="hover:translate-x-1 hover:bg-opacity-20 transition-all w-full bg-white bg-opacity-10 rounded-xl">
+            <a
+              class="h-full w-full flex justify-center items-center gap-2 font-bold text-button18 py-4"
+              href="#quem-somos"
+            >
+              Conhecer mais sobre
             </a>
           </div>
         </div>
       </main>
+      <div class="w-full container-loop h-[120px] relative">
+        <div class="overflow-hidden w-[1605px] absolute top-0 left-0 animate-loop-1">
+          <img class="" src="./assets/services.svg" alt="" srcset="" />
+        </div>
+        <div class="overflow-hidden w-[1605px] absolute top-0 left-0  animate-loop-2">
+          <img class="" src="./assets/services.svg" alt="" srcset="" />
+        </div>
+      </div>
+      <section>
+        <div class="px-5 container-1216 py-[160px] flex flex-col md:flex-row items-center z-50">
+          <div class="max-w-[600px]">
+            <h2 class="text-head40 md:text-head48 text-white leading-tight">
+              Temos uma
+              <span class="border-b-[2px] inline-block">equipe </span><br />
+              <span class="border-b-[2px] inline-block">completa </span>
+              para seu negócio
+            </h2>
+            <p class="mt-6 text-body18 text-white">
+              Selecionamos os melhores que encontramos para gerir seu projeto.
+              Conosco seu seu resultado será garantido.
+            </p>
+            <div class="mt-12">
+              <span class="text-caption16 font-semibold text-bold">DESIGN</span>
+              <div class="flex items-center gap-6 mt-6">
+                <div class="flex items-center gap-6">
+                  <img
+                    class="shrink-0"
+                    src="./assets/check-icon.svg"
+                    alt=""
+                    srcset=""
+                  />
+                  <h5>Design de interface (UI)</h5>
+                </div>
+                <div class="flex items-center gap-6">
+                  <img
+                    class="shrink-0"
+                    src="./assets/check-icon.svg"
+                    alt=""
+                    srcset=""
+                  />
+                  <h5>Experiência do usúario (UX)</h5>
+                </div>
+              </div>
+            </div>
+            <div class="mt-12">
+              <span class="text-caption16 font-semibold text-bold"
+                >DESENVOLVIMENTO</span
+              >
+              <div class="flex items-center gap-6 mt-6">
+                <div class="flex items-center gap-6">
+                  <img
+                    class="shrink-0"
+                    src="./assets/check-icon.svg"
+                    alt=""
+                    srcset=""
+                  />
+                  <h5>Desenvolvedor Front-end</h5>
+                </div>
+                <div class="flex items-center gap-6">
+                  <img
+                    class="shrink-0"
+                    src="./assets/check-icon.svg"
+                    alt=""
+                    srcset=""
+                  />
+                  <h5>Desenvolvedor Back-end</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-first mb-16 md:mb-0 md:order-2 max-w-[616px] flex justify-center items-center w-full">
+            <img
+              class="max-w-[448px] w-full"
+              src="./assets/entregamos-valor-image.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </section>
     </div>
 
+    <div
+      class="w-full h-[140px] bg-white bg-opacity-[0.02] flex justify-center items-center"
+    >
+      <p class="text-sub24 text-white font-light">construindo experiências.</p>
+    </div>
+
+    <section>
+      <div class="px-5 container-1216 py-[160px] flex flex-col md:flex-row items-center">
+        <div class="mb-16 md:mb-0 max-w-[616px] flex justify-center items-center w-full">
+          <img
+            class="max-w-[448px] w-full"
+            src="./assets/elevamos-o-seu-nivel.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="max-w-[600px]">
+          <h2 class="text-head40 text-right md:text-head48 text-white leading-tight">
+            não seja
+            <span class="border-b-[2px] inline-block">apenas mais </span><br />
+            <span class="border-b-[2px] inline-block"> um na multidão </span>
+          </h2>
+          <p class="text-right mt-6 text-body18 text-gray">
+            No mundo competitivo de hoje, é fácil se perder em meio à multidão.
+            Mas você não quer ser apenas mais um, certo? É hora de se destacar e
+            deixar sua marca.
+            <b class="text-white">
+              É hora de escolher um estúdio de design e desenvolvimento que
+              entenda a importância de ser único e autêntico.</b
+            >
+          </p>
+          <div class="flex md:justify-end mt-12">
+            <div class="hover:bg-transparent  border-2 border-pink transition-all md:max-w-[280px] bg-pink w-full py-4 rounded-xl">
+              <a
+                class=" w-full h-full flex justify-center items-center gap-2 text-white font-bold"
+                href="orcamento.html"
+              >
+                Vamos trabalhar juntos
+                <img src="./assets/arrow-right-bottom.svg" alt="" srcset="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="w-full h-[140px] bg-white bg-opacity-[0.02] flex justify-center items-center"
+    >
+      <p class="text-sub24 text-white font-light">
+        destacando você dos demais.
+      </p>
+    </div>
+
+    <div class="px-5 container-1216 py-[112px]">
+      <h2 class="font-light max-w-[420px] text-head40 md:text-head48 text-gray leading-tight">
+        Nossos projetos <b class="text-white font-bold">Mais recentes</b>
+      </h2>
+      <p class="font-normal text-white text-body18 mt-4">
+        Confira alguns dos projetos que desenvolvemos recentemente
+      </p>
+    </div>
+
+    <section>
+      <div
+        class="w-full bg-gradient-to-tr from-tradingproBlueDark to-tradingproBlueLight"
+      >
+        <div class="pt-[112px] md:pt-0 px-5 container-1216 min-h-[520px] flex flex-col md:flex-row justify-between">
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center gap-2">
+              <p
+                class="bg-white text-black text-small12 font-semibold rounded-2xl py-1 px-4"
+              >
+                Landing Page
+              </p>
+              <p
+                class="bg-white text-black text-small12 font-semibold rounded-2xl py-1 px-4"
+              >
+                Dashboard
+              </p>
+            </div>
+            <h3 class="text-white text-head48 font-light">TradingPro</h3>
+            <p class="text-body18 text-white max-w-[288px] font-light">
+              Plataforma de organização e planejamento para Day Traders
+            </p>
+            <div class="mt-16">
+              <span class="text-white font-normal text-small12 block"
+                >disponível para acesso</span
+              >
+              <a target="_blank" class="hover:border-white transition-all border-b border-transparent flex gap-2 items-center text-sub24 font-light" href="www.tradingpro.com.br">
+                www.tradingpro.com.br
+                <img
+                  src="./assets/arrow-top-right-white.svg"
+                  alt=""
+                  srcset=""
+                />
+              </a>
+            </div>
+          </div>
+          <div class="self-end mt-16 md:mt-0">
+            <img src="./assets/tradingpro-landing-page.png" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full bg-white py-[160px]">
+        <div class="px-5 container-1216 flex flex-col md:flex-row items-center justify-between">
+          <div class="max-w-[480px]">
+            <span class="text-caption16 text-black">we are cooking...</span>
+            <h3 class="text-black leading-tight text-head40 md:text-head48 mt-2">
+              Novos projetos estão a todo vapor. 🚂
+            </h3>
+            <a
+              class="border-b border-transparent hover:border-black transition-all text-black flex items-center gap-2 text-sub24 mt-7"
+              href="orcamento.html"
+            >
+              Gostaria de um orçamento
+              <img src="./assets/arrow-right-top.svg" alt="" srcset="" />
+            </a>
+          </div>
+          <div class="mt-16 md:mt-0 max-w-[453px]">
+            <p class="text-right text-black text-opacity-60 text-sub24">
+              O que acha de ser o próximo a aparecer aqui e
+              <b>alavancar sua empresa?</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 container-1216 flex flex-col md:flex-row items-center py-[160px]">
+      <div class="mb-[120px] md:mb-0 max-w-[616px] flex justify-center w-full">
+        <div class="max-w-[373px] w-full relative">
+          <img src="./assets/phone.svg" alt="" srcset="" />
+          <img
+            class="absolute right-2 md:right-[-50px] bottom-[-50px] animate-spin"
+            src="./assets/tag.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <div class="w-full flex flex-col items-end">
+        <h2
+          class="text-head40 md:text-head64 text-white max-w-[420px] text-right leading-tight"
+        >
+          Solicite seu orçamento <b>sem compromisso.</b>
+        </h2>
+        <p class="text-body16 text-right text-white mt-3">
+          Iremos retornar seu contato assim que possível
+        </p>
+        <div class="w-full flex justify-end mt-12">
+          <div class="hover:bg-transparent  border-2 border-pink transition-all md:max-w-[280px] w-full bg-pink py-4 rounded-xl">
+            <a
+              class="w-full h-full flex justify-center items-center gap-2 text-white font-bold"
+              href="orcamento.html"
+            >
+              Vamos trabalhar juntos
+              <img src="./assets/arrow-right-bottom.svg" alt="" srcset="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[url('../assets/bg-porto-alegre.png')] bg-cover bg-no-repeat"
+    >
+      <div
+        class="px-5 container-1216 flex flex-col items-end w-full pt-[82px] pb-[203px]"
+      >
+        <h2 class="text-right text-head48 leading-tight text-white">
+          Sua transação <br />
+          <b class="font-bold"> aqui é segura. </b>
+        </h2>
+        <p class="max-w-[434px] text-right mt-3">
+          Projeto entregue no prazo ou seu dinheiro de volta,<br />
+          +100 clientes de referência em diferentes segmentos,<br />
+          atendimento rápido e soluções inovadoras e <br />
+          Atendimento remoto para todo brasil
+        </p>
+      </div>
+    </section>
+
+    <section class="w-full py-[74px] bg-purple">
+      <div class="px-5 container-1216 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center gap-12">
+          <a target="_blank" class="hover:opacity-70 transition-all" href="https://www.99freelas.com.br/user/devmarlonuiux">
+            <img
+              src="./assets/99freelas.svg"
+              alt="Perfil na plataforma 99freelas"
+            />
+          </a>
+          <a target="_blank" class="hover:opacity-70 transition-all" href="https://www.workana.com/freelancer/9be7b92bc561cbe5c2cd818c11fe2a7c">
+            <img
+              src="./assets/workana.svg"
+              alt="Perfil na plataforma Workana"
+            />
+          </a>
+          <a class="hover:opacity-70 transition-all" href="">
+            <img src="./assets/fiverr.svg" alt="Perfil na plataforma Fiverr" />
+          </a>
+        </div>
+        <div class="mt-12 md:mt-0">
+          <h6 class="text-head24 md:text-head28 text-white max-w-[588px] text-right">
+            Estamos
+            <span class="inline-block border-b-2 border-white"
+              >disponíveis para contratação direta</span
+            >
+            por meio das principais plataformas do pais
+          </h6>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white bg-opacity-5 py-[90px]">
+      <div class="px-5 container-1216">
+        <div class="w-full flex flex-col md:flex-row gap-8">
+          <div class="max-w-[373px] w-full">
+            <a href="index.html">
+              <img src="./assets/logo-devmarlon.svg" alt="Logotipo do estúdio" srcset="" />
+            </a>
+            <p class="text-body16 text-gray mt-7 leading-normal">
+              Somos um estúdio de design de interface e desenvolvimento de
+              sites, sistemas e aplicativos. garantimos qualidade e segurança na
+              entrega do seu projeto. do design ao código.
+            </p>
+          </div>
+          <div class="w-full flex flex-col md:flex-row items-start gap-8">
+            <div class="md:max-w-[206px] w-full">
+              <p class="text-body font-semibold text-gray text-body18">
+                SEÇÕES
+              </p>
+              <ul class="mt-6 flex flex-col gap-4">
+                <li>
+                  <a class="font-normal text-white text-body16 hover:text-pink transition-all" href="#inicio"
+                    >Início</a
+                  >
+                </li>
+                <li>
+                  <a class="font-normal text-white text-body16 hover:text-pink transition-all" href="#quem-somos"
+                    >Quem somos</a
+                  >
+                </li>
+                <li>
+                  <a class="font-normal text-white text-body16 hover:text-pink transition-all" href="#projetos"
+                    >Projetos</a
+                  >
+                </li>
+                <li>
+                  <a class="font-normal text-white text-body16 hover:text-pink transition-all" href="#contato"
+                    >Contato</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="md:max-w-[285px] w-full">
+              <p class="text-body font-semibold text-gray text-body18">
+                CONTATO
+              </p>
+              <ul class="w-full mt-6 flex flex-col gap-4">
+                <li>
+                  <a
+                  target="_blank"
+                    class="font-normal text-white whitespace-nowrap text-body16 flex items-center gap-2 hover:opacity-70 transition-all"
+                    href="https://api.whatsapp.com/send/?phone=5551980392037&text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento!"
+                  >
+                    <img src="./assets/whatsapp-icon.svg" alt="" />
+                    +55 (51) 98039-2037
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-normal text-white whitespace-nowrap text-body16 flex items-center gap-2 hover:opacity-70 transition-all"
+                    href="mailto:marlonlenciina@gmail.com"
+                  >
+                    <img src="./assets/email-icon.svg" alt="" />
+                    me@devmarlon.work
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-normal text-white whitespace-nowrap text-body16 flex items-center gap-2 hover:opacity-70 transition-all"
+                    href="https://www.instagram.com/devmarlon.work/"
+                  >
+                    <img src="./assets/instagram-icon-footer.svg" alt="" />
+                    @devmarlon.work
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="md:max-w-[312px] w-full">
+              <div class="hover:opacity-70 transition-all w-full bg-white rounded-xl bg-opacity-10 py-3">
+                <a
+                  class="flex justify-center items-center gap-2 text-button18 font-bold"
+                  href="orcamento.html"
+                >
+                  Quero um orçamento
+                  <img src="./assets/arrow-right-white.svg" alt="" srcset="" />
+                </a>
+              </div>
+              <div class="w-full mt-12">
+                <p class="text-body font-semibold text-gray text-body18">
+                  HORÁRIO DE ATENDIMENTO
+                </p>
+                <p class="font-normal text-white text-body18 mt-6" href="#"></p>
+                Time comercial atende de SEG a SEX das 8:00h - 21:00h
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full text-gray flex text-body16 font-normal justify-center mt-12 pb-12 border-b border-b-white border-opacity-10">
+          Desenvolvido com amor ❤️ por devMarlon.
+        </div>
+
+        <div class="w-full text-body16 text-white text-opacity-20 text-justify mt-12 leading-normal font-light">
+          Bem-vindo ao devmarlon de Design de Interfaces e Desenvolvimento Web. Obrigado por visitar nosso site e considerar nossos serviços. Este texto de copyright tem o objetivo de proteger os direitos autorais do nosso estúdio e estabelecer os termos e condições de uso para nossos clientes e visitantes.
+ 1. Propriedade Intelectual: Todo o conteúdo presente neste site, incluindo, mas não se limitando a textos, imagens, gráficos, logotipos, ícones, elementos visuais e design de interface, é propriedade exclusiva do [Nome do Es    túdio de Design de Interfaces e Desenvolvimento Web] e está protegido por leis de direitos autorais.
+ 2. Uso Restrito: Nenhum conteúdo deste site pode ser reprodu zido, modificado, distribuído, transmitido, republicado ou utilizado de qualquer forma sem a autorização prévia por escrito do [Nome do Estúdio de Design de Interfaces e Desenvolvimento Web]. Qualquer uso não autorizado constitui violação dos direitos autorais e sujeitará o infrator a ações legais.
+ 3. Direitos do Cliente: Ao contratar nossos serviços, o cliente receberá o direito de uso exclusivo dos projetos desenvolvidos pelo [Nome do Estúdio de Design de Interfaces e Desenvolvimento Web] para o seu próprio uso comercial. O cliente não poderá revender, sublicenciar ou transferir os direitos autorais do material entregue sem a autorização por escrito do estúdio.
+ 4. Responsabilidade Limitada: O [Nome do Estúdio de Design de Interfaces e Desenvolvimento Web] não se responsabiliza por quaisquer danos, diretos ou indiretos, decorrentes do uso ou da incapacidade de uso deste site ou dos serviços prestados. Nosso objetivo é fornecer informações precisas e serviços de qualidade, mas não garantimos a ausência de erros ou interrupções.
+ 5. Privacidade e Segurança: Respeitamos a privacidade dos nossos clientes e visitantes. As informações pessoais fornecidas serão tratadas de acordo com a nossa Política de Privacidade. Tomamos medidas de segurança para proteger as informações e dados armazenados, mas não podemos garantir a segurança absoluta na transmissão ou armazenamento online.
+ 6. Alterações nos Termos: O [Nome do Estúdio de Design de Interfaces e Desenvolvimento Web] reserva-se o direito de modificar estes termos e condições a qualquer momento, mediante aviso prévio em nosso site. Recomendamos que os visitantes e clientes revisem periodicamente este texto de copyright para estar cientes de eventuais atualizações.
+ Ao utilizar nosso site ou contratar nossos serviços, você concorda em cumprir os termos e condições estabelecidos neste texto de copyright. Se tiver alguma dúvida ou precisar de mais informações, entre em contato conosco através dos canais disponibilizados em nosso site.
+ Agradecemos sua compreensão e apoio.
+ Equipe do devmarlon de Design de Interfaces e Desenvolvimento Web
+        </div>
+        <div class="mt-12 w-full flex justify-center text-center text-body16 text-white text-opacity-40 font-light">
+          Todos os direitos reservados a DevMarlon Design e Desenvolvimento de Interfaces. Registrado em 2023 ©
+        </div>
+      </div>
+    </footer>
+
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="./script/header.js"></script>
   </body>
 </html>
