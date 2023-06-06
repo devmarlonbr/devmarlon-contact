@@ -110,3 +110,81 @@ body {
     background: linear-gradient(to bottom, rgba(5, 5, 6, 1), rgba(5, 5, 6, 0));
   }
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #501ffb;
+}
+
+::selection {
+  color: #fff;
+  background: #501ffb;
+}
+
+/* intersect */
+
+.intersect {
+  transition: 0.4s all;
+  overflow: hidden;
+}
+
+.intersect-hidden {
+  opacity: 0;
+}
+
+.intersect-show {
+  opacity: 1;
+}
+
+/* from bottom */
+.intersect-animate-bottom {
+  transition: 0.4s all;
+}
+
+.intersect-hidden.intersect-animate-bottom {
+  transform: translateY(25%);
+}
+
+.intersect-show.intersect-animate-bottom {
+  transform: translateY(0%);
+}
+
+/* from right */
+.intersect-animate-right {
+  transition: 0.4s all;
+}
+
+.intersect-hidden.intersect-animate-right {
+  transform: translateX(25%);
+}
+
+.intersect-show.intersect-animate-right {
+  transform: translateX(0%);
+}
+
+/* from left */
+.intersect-animate-left {
+  transition: 0.4s all;
+}
+
+.intersect-hidden.intersect-animate-left {
+  transform: translateX(-25%);
+}
+
+.intersect-show.intersect-animate-left {
+  transform: translateX(0%);
+}
+
+/* from top */
+.intersect-animate-top {
+  transition: 0.4s all;
+}
+
+.intersect-hidden.intersect-animate-top {
+  transform: translateY(-25%);
+}
+
+.intersect-show.intersect-animate-top {
+  transform: translateY(0%);
+}
