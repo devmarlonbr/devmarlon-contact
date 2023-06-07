@@ -26,3 +26,12 @@ const handleScroll = () => {
     header.classList.remove("bg-header-fixed");
   }
 };
+
+function checkIfIsScrolled() {
+  const scrollY = window.scrollY;
+  if (scrollY > 90) {
+    header.classList.add("bg-header-fixed");
+  }
+}
+
+checkIfIsScrolled();
