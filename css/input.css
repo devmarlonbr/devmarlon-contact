@@ -203,3 +203,7 @@ body {
 .intersect-show.intersect-animate-top {
   transform: translateY(0%);
 }
+
+.active {
+  border-color: #fff;
+}

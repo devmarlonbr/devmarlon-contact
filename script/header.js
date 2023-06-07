@@ -35,3 +35,42 @@ function checkIfIsScrolled() {
 }
 
 checkIfIsScrolled();
+
+const btnHeaderInicio = document.querySelector("#header-inicio");
+const btnHeaderQuemSomos = document.querySelector("#header-quem-somos");
+const btnHeaderProjetos = document.querySelector("#header-projetos");
+const btnHeaderContato = document.querySelector("#header-contato");
+
+const btnsHeader = document.querySelectorAll(".link-navbar");
+
+const SectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      btnsHeader.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      switch (entry.target.id) {
+        case "inicio":
+          btnHeaderInicio.classList.add("active");
+          break;
+        case "quem-somos":
+          btnHeaderQuemSomos.classList.add("active");
+          break;
+        case "projetos":
+          btnHeaderProjetos.classList.add("active");
+          break;
+        case "contato":
+          btnHeaderContato.classList.add("active");
+          break;
+        default:
+          break;
+      }
+    }
+  });
+});
+const sections = document.querySelectorAll(".section-observer");
+
+sections.forEach((section) => {
+  SectionObserver.observe(section);
+});

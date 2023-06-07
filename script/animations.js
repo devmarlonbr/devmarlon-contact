@@ -1,8 +1,6 @@
 // callback run every time screen intersect an element
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry.target);
-
     if (entry.isIntersecting) {
       entry.target.classList.add("intersect-show");
       entry.target.classList.remove("intersect-hidden");
